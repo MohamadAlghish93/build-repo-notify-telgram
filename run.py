@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 REBUILD_MARKER = '.rebuild'
 
 HOST_DIR="/home/mhdgh/Desktop/my-development/python/build-repo-notify-telgram"
-REPO_URL=""
+REPO_URL="https://github.com/MohamadAlghish93/ssci_test.git"
 REPO_BRANCH="main"
 BUILD_CMD="docker-compose up -d --build"
 GIT_PYTHON_TRACE=""
@@ -90,6 +90,7 @@ def check_new_commits(repo: Repo):
         repo.remote('origin').update()
     up_to_date = 'Your branch is up to date with' in repo.git.status(u='no')
     if not up_to_date:
+        notify('Changes detected in remote, pulling...')
         print('Changes detected in remote, pulling...')
         with print_git_error():
             repo.remote('origin').pull()
