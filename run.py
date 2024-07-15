@@ -16,8 +16,8 @@ REPO_URL=""
 REPO_BRANCH="main"
 BUILD_CMD="docker-compose up -d --build"
 GIT_PYTHON_TRACE=""
-TELEGRAM_TOKEN="1804360131:AAHaJP6Tt9lROVyyMnKcsAQCilxmYAlikf8"
-TELEGRAM_CHATS="-502337253" # Group id get it from API called getupdate
+TELEGRAM_TOKEN=""
+TELEGRAM_CHATS="" # Group id get it from API called getupdate
 
 # REPO_URL = os.environ.get('REPO_URL')
 # REPO_BRANCH = os.environ.get('REPO_BRANCH', 'master')
